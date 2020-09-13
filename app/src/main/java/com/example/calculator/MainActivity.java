@@ -13,8 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private int[] numericButtons = {R.id.buttonZero, R.id.buttonOne, R.id.buttonTwo, R.id.buttonThree,
             R.id.buttonFour, R.id.buttonFive, R.id.buttonSix, R.id.buttonSeven, R.id.buttonEight, R.id.buttonNine};
     private int[] operatorButtons = {R.id.buttonModular, R.id.buttonMultiply, R.id.buttonDivide, R.id.buttonAddition, R.id.buttonSubstraction};
-    private boolean isZero = true;
-    private boolean lastNumeric = false;
+    private boolean isZero = true, lastNumeric = false, isDecimal = false;
     private float num1 = 0, num2 = 0;
     private String operator = "";
     private StringBuilder sb = new StringBuilder();
@@ -31,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         setOperatorOnClickListener();
         setClearOnClickListener();
         setEvaluateOnClickListener();
+        setPeriodOnClickListener();
     }
 
     //On Click listener to evaluate memory
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                         answer = addition(num1, num2);
                         break;
                     case "-" :
-                        answer = substract(num1, num2);
+                        answer = subtract(num1, num2);
                         break;
                     case "*" :
                         answer = multiply(num1, num2);
@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
                 num2 = 0;
                 operator = "";
                 lastNumeric = true;
+                isDecimal = true;
             }
         });
     }
@@ -80,7 +81,23 @@ public class MainActivity extends AppCompatActivity {
                 currentShown.setText("0");
                 lastNumeric = false;
                 isZero = true;
+                isDecimal = false;
                 sb = new StringBuilder();
+            }
+        });
+    }
+
+    //On Click listener to add a period to number
+    private void setPeriodOnClickListener() {
+        findViewById(R.id.buttonPeriod).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Button button = (Button) view;
+                if(!isDecimal) {
+                    currentShown.append(button.getText());
+                    if (operator != "") sb = sb.append(button.getText());
+                    isDecimal = true;
+                }
             }
         });
     }
@@ -116,6 +133,7 @@ public class MainActivity extends AppCompatActivity {
                     currentShown.append(button.getText());
                     //If we have an operator selected
                     if (operator != "") {
+                        if (sb.length() == 0) isDecimal = false;
                         sb = sb.append(button.getText());
                     }
                 }
@@ -132,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
         return (num1 + num2);
     }
 
-    private float substract (float num1, float num2) {
+    private float subtract (float num1, float num2) {
         return (num1 - num2);
     }
 
