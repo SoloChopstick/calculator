@@ -1,6 +1,7 @@
 package com.example.calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.os.Bundle;
 import android.view.View;
@@ -10,9 +11,9 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private TextView currentShown;
-    private int[] numericButtons = {R.id.buttonZero, R.id.buttonOne, R.id.buttonTwo, R.id.buttonThree,
-            R.id.buttonFour, R.id.buttonFive, R.id.buttonSix, R.id.buttonSeven, R.id.buttonEight, R.id.buttonNine};
-    private int[] operatorButtons = {R.id.buttonModular, R.id.buttonMultiply, R.id.buttonDivide, R.id.buttonAddition, R.id.buttonSubtraction};
+    private int[] numericButtons = {R.id.buttonZeroText, R.id.buttonOneText, R.id.buttonTwoText, R.id.buttonThreeText,
+            R.id.buttonFourText, R.id.buttonFiveText, R.id.buttonSixText, R.id.buttonSevenText, R.id.buttonEightText, R.id.buttonNineText};
+    private int[] operatorButtons = {R.id.buttonModularText, R.id.buttonMultiplyText, R.id.buttonDivideText, R.id.buttonAdditionText, R.id.buttonSubtractionText};
     private boolean isZero = true, lastNumeric = false, isDecimal = false;
     private float num1 = 0, num2 = 0;
     private String operator = "";
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
     //On Click listener to evaluate memory
     private void setEvaluateOnClickListener() {
-        findViewById(R.id.buttonEquals).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.buttonEqualsText).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 num2 = Float.parseFloat(sb.toString());
@@ -72,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
     //On Click listener to erase memory
     private void setClearOnClickListener() {
-        findViewById(R.id.buttonClear).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.buttonClearText).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 num1 = 0;
@@ -89,10 +90,10 @@ public class MainActivity extends AppCompatActivity {
 
     //On Click listener to add a period to number
     private void setPeriodOnClickListener() {
-        findViewById(R.id.buttonPeriod).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.buttonPeriodText).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Button button = (Button) view;
+                TextView button = (TextView) view;
                 if(!isDecimal) {
                     currentShown.append(button.getText());
                     if (operator != "") sb = sb.append(button.getText());
@@ -107,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (lastNumeric) {
-                    Button button = (Button) view;
+                    TextView button = (TextView) view;
                     num1 = Float.parseFloat(currentShown.getText().toString());
                     operator = button.getText().toString();
                     currentShown.append(button.getText());
@@ -124,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Button button = (Button) view;
+                TextView button = (TextView) view;
                 //Starting with 0 as default showing
                 if (isZero) {
                     currentShown.setText(button.getText());
