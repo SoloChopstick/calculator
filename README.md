@@ -2,4 +2,4 @@
 
 Basic Android APP calculator
 
-![calculator](/images/calculator.png?raw=true)
+![calculator](/images/calculator.PNG?raw=true)
