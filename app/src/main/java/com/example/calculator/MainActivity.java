@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView currentShown;
     private int[] numericButtons = {R.id.buttonZero, R.id.buttonOne, R.id.buttonTwo, R.id.buttonThree,
             R.id.buttonFour, R.id.buttonFive, R.id.buttonSix, R.id.buttonSeven, R.id.buttonEight, R.id.buttonNine};
-    private int[] operatorButtons = {R.id.buttonModular, R.id.buttonMultiply, R.id.buttonDivide, R.id.buttonAddition, R.id.buttonSubstraction};
+    private int[] operatorButtons = {R.id.buttonModular, R.id.buttonMultiply, R.id.buttonDivide, R.id.buttonAddition, R.id.buttonSubtraction};
     private boolean isZero = true, lastNumeric = false, isDecimal = false;
     private float num1 = 0, num2 = 0;
     private String operator = "";
