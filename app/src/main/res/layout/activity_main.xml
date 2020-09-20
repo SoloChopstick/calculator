@@ -14,7 +14,8 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:text="@string/zero"
-        android:textSize="36sp" />
+        android:textSize="72sp"
+        android:padding="24sp"/>
 
     <GridLayout
         android:id="@+id/GridLayout"
@@ -31,7 +32,7 @@
             android:layout_row="0"
             android:layout_column="0"
             android:layout_gravity="fill"
-            android:layout_columnWeight="1"
+            android:layout_columnWeight="0"
             android:layout_rowWeight="1"
             android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
@@ -39,12 +40,13 @@
 
             <TextView
                 android:id="@+id/buttonClearText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:background="@color/operatorColor"
                 android:text="@string/clear"
-                android:textSize="20sp" />
+                android:textSize="32sp"
+                android:gravity="center"/>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -54,7 +56,7 @@
             android:layout_row="0"
             android:layout_column="1"
             android:layout_gravity="fill"
-            android:layout_columnWeight="1"
+            android:layout_columnWeight="0"
             android:layout_rowWeight="1"
             android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
@@ -62,12 +64,13 @@
 
             <TextView
                 android:id="@+id/buttonChangeSignText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:background="@color/operatorColor"
-                android:text="@string/changeSign"
-                android:textSize="20sp"/>
+                android:text="+/-"
+                android:textSize="32sp"
+                android:gravity="center"/>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -85,12 +88,13 @@
 
             <TextView
                 android:id="@+id/buttonModularText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:background="@color/operatorColor"
                 android:text="@string/modular"
-                android:textSize="20sp"/>
+                android:textSize="32sp"
+                android:gravity="center"/>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -107,12 +111,13 @@
             android:elevation="8dp">
             <TextView
                 android:id="@+id/buttonDivideText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:background="@color/operatorColor"
                 android:text="@string/divide"
-                android:textSize="20sp"/>
+                android:textSize="32sp"
+                android:gravity="center"/>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -129,12 +134,13 @@
             android:elevation="8dp">
             <TextView
                 android:id="@+id/buttonSevenText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_vertical|center_horizontal"
-                android:background="@color/operatorColor"
+                android:background="@color/buttonColor"
                 android:text="7"
-                android:textSize="20sp"/>
+                android:textSize="32sp"
+                android:gravity="center"/>
         </androidx.cardview.widget.CardView>
 
 
@@ -152,12 +158,13 @@
             android:elevation="8dp">
             <TextView
                 android:id="@+id/buttonEightText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_vertical|center_horizontal"
-                android:background="@color/operatorColor"
+                android:background="@color/buttonColor"
                 android:text="8"
-                android:textSize="20sp"/>
+                android:textSize="32sp"
+                android:gravity="center"/>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -174,12 +181,13 @@
             android:elevation="8dp">
             <TextView
                 android:id="@+id/buttonNineText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_vertical|center_horizontal"
-                android:background="@color/operatorColor"
+                android:background="@color/buttonColor"
                 android:text="9"
-                android:textSize="20sp"/>
+                android:textSize="32sp"
+                android:gravity="center"/>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -196,12 +204,13 @@
             android:elevation="8dp">
             <TextView
                 android:id="@+id/buttonMultiplyText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:background="@color/operatorColor"
                 android:text="@string/multiply"
-                android:textSize="20sp"/>
+                android:textSize="32sp"
+                android:gravity="center"/>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -219,12 +228,13 @@
 
             <TextView
                 android:id="@+id/buttonFourText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_vertical|center_horizontal"
-                android:background="@color/operatorColor"
+                android:background="@color/buttonColor"
                 android:text="4"
-                android:textSize="20sp"/>
+                android:textSize="32sp"
+                android:gravity="center"/>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -239,6 +249,15 @@
             android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
             android:elevation="8dp">
+            <TextView
+                android:id="@+id/buttonFiveText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@color/buttonColor"
+                android:text="5"
+                android:textSize="32sp"
+                android:gravity="center"/>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -253,6 +272,15 @@
             android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
             android:elevation="8dp">
+            <TextView
+                android:id="@+id/buttonSixText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@color/buttonColor"
+                android:text="6"
+                android:textSize="32sp"
+                android:gravity="center"/>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -267,6 +295,15 @@
             android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
             android:elevation="8dp">
+            <TextView
+                android:id="@+id/buttonSubtractionText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@color/operatorColor"
+                android:text="@string/subtract"
+                android:textSize="32sp"
+                android:gravity="center"/>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -281,6 +318,15 @@
             android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
             android:elevation="8dp">
+            <TextView
+                android:id="@+id/buttonOneText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@color/buttonColor"
+                android:text="1"
+                android:textSize="32sp"
+                android:gravity="center"/>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -295,6 +341,15 @@
             android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
             android:elevation="8dp">
+            <TextView
+                android:id="@+id/buttonTwoText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@color/buttonColor"
+                android:text="2"
+                android:textSize="32sp"
+                android:gravity="center"/>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -309,6 +364,15 @@
             android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
             android:elevation="8dp">
+            <TextView
+                android:id="@+id/buttonThreeText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@color/buttonColor"
+                android:text="3"
+                android:textSize="32sp"
+                android:gravity="center"/>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -323,6 +387,15 @@
             android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
             android:elevation="8dp">
+            <TextView
+                android:id="@+id/buttonAdditionText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@color/operatorColor"
+                android:text="@string/addition"
+                android:textSize="32sp"
+                android:gravity="center"/>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -337,6 +410,15 @@
             android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
             android:elevation="8dp">
+            <TextView
+                android:id="@+id/buttonZeroText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@color/buttonColor"
+                android:text="0"
+                android:textSize="32sp"
+                android:gravity="center"/>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -351,6 +433,15 @@
             android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
             android:elevation="8dp">
+            <TextView
+                android:id="@+id/buttonPeriodText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@color/operatorColor"
+                android:text="@string/period"
+                android:textSize="32sp"
+                android:gravity="center"/>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -366,6 +457,15 @@
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:layout_columnSpan="2">
+            <TextView
+                android:id="@+id/buttonEqualsText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@color/operatorColor"
+                android:text="@string/equals"
+                android:textSize="32sp"
+                android:gravity="center"/>
         </androidx.cardview.widget.CardView>
     </GridLayout>
 </RelativeLayout>
